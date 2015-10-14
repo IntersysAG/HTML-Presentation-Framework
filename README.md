@@ -74,8 +74,3 @@ You can change the `<title>` tag or modifiy what you like, but don’t delete th
 Yeah, the slides!
 
 Create and rename as many files as you want, but include each in the main file `_slides.html`. Set the order from up to down.
-
-## Known issues
-The grunt watch event cannot listen to new files.
-
-If you have created new files (for example a new slide in the folder `~/HTML-Presentation-Framework/src/slides`) restart the grunt workflow in your terminal.
