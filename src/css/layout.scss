@@ -119,11 +119,73 @@ ul {
 	}
 }
 
+section[data-presentation-transition="next-in"] {
+	#intersys {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 150px;
+		height: 104px;
 
+		&:before {
+			content: '';
+			position: absolute;
+			width: 150px;
+			height: 104px;
+			background-image: url(../src/img/mask-shadow.png);
+			animation-duration: 2000ms;
+			animation-fill-mode: forwards;
+			transform: translateZ(0);
+			animation-name: mask;
+			z-index: 3;
+		}
 
+		&:after {
+			content: '';
+			position: absolute;
+			width: 150px;
+			height: 104px;
+			background-image: url(../src/img/logo.png);
+			animation-duration: 2000ms;
+			animation-fill-mode: forwards;
+			transform: translateZ(0);
+			animation-name: logo;
+			z-index: 1;
+		}
 
+		> div {
+			position: absolute;
+			width: 150px;
+			height: 104px;
+			background-image: url(../src/img/mask.png);
+			z-index: 2;
+		}
+	}
+}
 
+@keyframes mask {
+	0% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
+@keyframes logo {
+	0% {
+		-webkit-transform: scale(0);
+	}
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
 
 
 
